@@ -237,7 +237,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     endfun
     " }}}
 
-    call <SID>X('Normal', 'f7f3e8', '333333')
+    call <SID>X('Normal', 'f7f3e8', '373737')
     call <SID>X('Nontext', '070707')
 
     " highlight groups
