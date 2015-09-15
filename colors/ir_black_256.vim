@@ -276,7 +276,7 @@ if version >= 700 " Vim 7.x specific colors
     call <SID>X('MatchParen', 'f6f3e8', '857b6f', 'bold')
     call <SID>X('Pmenu', 'f6f3e8', '444444')
     call <SID>X('PmenuSel', 'black', 'cae682')
-    call <SID>X('Search', 'none', '2F2F00', 'underline')
+    call <SID>X('Search', '', '', 'reverse')
 endif
 
 " Syntax highlighting
