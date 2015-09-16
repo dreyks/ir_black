@@ -325,7 +325,7 @@ hi link Debug           Special
     call <SID>X('rubyEscape', 'white')
     call <SID>X('rubyInterpolationDelimiter', '00a0a0')
     call <SID>X('rubyControl', '6699CC')
-    call <SID>X('rubyStringDelimiter', '336633')
+    call <SID>X('rubyStringDelimiter', 'A8FF60')
     
 "hi rubyGlobalVariable          guifg=#FFCCFF      guibg=NONE      gui=NONE      ctermfg=lightblue      ctermbg=NONE      cterm=NONE  "yield
 "rubyInclude
