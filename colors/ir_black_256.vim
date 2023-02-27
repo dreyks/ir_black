@@ -223,12 +223,14 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
         if a:fg != ''
             let fg = tolower(a:fg)
             let fg_hex = has_key(g:rgb_colors, fg) ? g:rgb_colors[fg] : a:fg
-            exec 'hi ' . a:group . ' guifg=#' . fg_hex . ' ctermfg=' . <SID>rgb(fg_hex)
+            let guifg = fg_hex == 'none' ? 'NONE' : ('#' . fg_hex)
+            exec 'hi ' . a:group . ' guifg=' . guifg . ' ctermfg=' . <SID>rgb(fg_hex)
         endif
         if a:0 > 0 && a:1 != ''
             let bg = tolower(a:1)
             let bg_hex = has_key(g:rgb_colors, bg) ? g:rgb_colors[bg] : bg
-            exec 'hi ' . a:group . ' guibg=#' . bg_hex . ' ctermbg=' . <SID>rgb(bg_hex)
+            let guibg = bg_hex == 'none' ? 'NONE' : ('#' . bg_hex)
+            exec 'hi ' . a:group . ' guibg=' . guibg . ' ctermbg=' . <SID>rgb(bg_hex)
         endif
         if a:0 > 1 && a:2 != ''
             let attr = a:2
@@ -257,7 +259,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     " call <SID>X('Folded', 'a0a8b0')
     call <SID>X('Folded', 'white')
     call <SID>X('Title', 'f6f3e8', 'none', 'italic')
-    call <SID>X('Visual', '', '262D51', 'reverse')
+    call <SID>X('Visual', 'none', '262D51', 'reverse')
 
     call <SID>X('SpecialKey', '808080', '343434')
 
